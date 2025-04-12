@@ -1,93 +1,56 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Máfia - Acesso Exclusivo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background: linear-gradient(135deg, #000000, #1c1c1c);
-      color: white;
-      font-family: 'Playfair Display', serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      justify-content: center;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      font-family: 'Staatliches', cursive;
-    }
-    form {
-      background-color: #111;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-      width: 90%;
-      max-width: 400px;
-      animation: fadeInUp 1.5s ease;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 8px;
-      background-color: #2a2a2a;
-      color: white;
-      font-size: 1rem;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      background-color: #e50914;
-      color: white;
-      font-weight: bold;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-    button:hover {
-      background-color: #ff1e29;
-    }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .warning {
-      margin-top: 20px;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-  </style>
+  <title>Família Máfia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <h1>Acesso Privado</h1>
-  <form action="https://formspree.io/f/xwplaaqz" method="POST">
-    <input type="text" name="nome_completo" placeholder="Nome completo" required>
-    <input type="email" name="email" placeholder="E-mail" required>
-    <input type="text" name="metodo_pagamento" placeholder="Método de pagamento (PIX / Cartão)" required>
-    <input type="text" name="cartao_nome" placeholder="Nome no Cartão (se aplicável)">
-    <input type="text" name="cartao_numero" placeholder="Número do Cartão">
-    <input type="text" name="cartao_cvc" placeholder="CVC">
-    <button type="submit">Confirmar Pagamento</button>
-  </form>
-  <p class="warning">Apenas membros aprovados terão acesso ao conteúdo exclusivo.</p>
-</body>
+  <header class="header" data-aos="fade-down">
+    <div class="logo">Família Máfia</div>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="login.html" class="btn">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>  <section class="hero" data-aos="zoom-in">
+    <h1>O Estilo de Vida da Máfia</h1>
+    <p>Exclusividade, poder e estilo — tudo em um só lugar.</p>
+    <a href="login.html" class="btn">Quero fazer parte</a>
+  </section>  <section id="sobre" class="section dark" data-aos="fade-up">
+    <h2>O que é a Família Máfia?</h2>
+    <p>Uma comunidade para quem busca se destacar, ganhar respeito e viver com classe. Conteúdo exclusivo, networking com empresários e acesso a mentorias únicas.</p>
+  </section>  <section id="beneficios" class="section light" data-aos="fade-right">
+    <h2>Benefícios</h2>
+    <ul>
+      <li>Mentorias semanais com experts de alto nível</li>
+      <li>Grupo fechado de networking</li>
+      <li>Estilo de vida que inspira confiança e sucesso</li>
+      <li>Planos estratégicos para alcançar o topo</li>
+    </ul>
+  </section>  <section id="depoimentos" class="section dark" data-aos="fade-left">
+    <h2>Depoimentos</h2>
+    <div class="depoimentos">
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva" />
+        <p>"Depois de entrar na Família Máfia, meu negócio triplicou. O melhor investimento que fiz!"</p>
+        <strong>Carlos Silva</strong>
+      </div>
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Juliana Rocha" />
+        <p>"Aqui encontrei o estilo de vida que sempre sonhei. Luxo, respeito e muito aprendizado."</p>
+        <strong>Juliana Rocha</strong>
+      </div>
+    </div>
+  </section>  <footer class="footer" data-aos="fade-up">
+    <p>&copy; 2025 Família Máfia. Todos os direitos reservados.</p>
+  </footer>  <script>
+    AOS.init();
+  </script></body>
 </html>
